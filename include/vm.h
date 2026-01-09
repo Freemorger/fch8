@@ -24,7 +24,8 @@
 #define STACK_SIZE 16
 
 typedef struct VM {
-    uint16_t pc;    
+    uint16_t pc; // program counter 
+    uint16_t i; // index register
     uint16_t stack[STACK_SIZE];
     char memory[MEMORY_SIZE];
     char gpr[GPR_COUNT]; // v0-ve
