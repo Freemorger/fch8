@@ -1,3 +1,1 @@
-- implemented 20/32 (62%) instructions, implement others
-- add license
-- add readme
+- play sound
