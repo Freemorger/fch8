@@ -10,11 +10,14 @@ cd fch8/
 
 > To build fch8, you would need raylib installed   
 
-Build using make:
+This project now uses [MAD build system](https://github.com/Freemorger/mad).
+Build using MAD:
 ```bash 
-make debug # build unoptimized ver with dbg symbols
-# make all # or build release, optimized
+mad release # build optimized, recommended for normal usage
+# mad debug # build unoptimized with debug symbols 
+# mad clean # clean obj files if there so 
 ```
+
 ## Running
 Run chip8 binary game from file:
 ```bash 

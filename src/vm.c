@@ -181,7 +181,6 @@ void vm_iter(VM* vm) {
                 }
                 case 6: {
                     size_t rdst_idx = (instr & 0x0F00) >> 8;
-                    size_t rsrc_idx = (instr & 0x00F0) >> 4;
 
                     vm->gpr[rdst_idx] >>= 1;
                     break;
@@ -195,7 +194,6 @@ void vm_iter(VM* vm) {
                 }
                 case 0xE: {
                     size_t rdst_idx = (instr & 0x0F00) >> 8;
-                    size_t rsrc_idx = (instr & 0x00F0) >> 4;
 
                     vm->gpr[rdst_idx] <<= 1;
                     break;

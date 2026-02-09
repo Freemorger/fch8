@@ -42,7 +42,7 @@ int main(int argc, char** argv) {
         }
 
         if (accum > 1.0) {
-            vm->dt = vm->dt > 0 ? --vm->dt : 0;
+            vm->dt = vm->dt > 0 ? vm->dt - 1 : 0;
             accum = 0.0;
         }
     }

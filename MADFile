@@ -1,0 +1,28 @@
+# debug build with -g
+recipe debug { 
+    CC = gcc
+    INPUT = src/*.c 
+    OUTPUT = fch8
+    LINK = -lraylib 
+    CFLAGS = -DDEBUG -g -Wall -Wextra
+
+    CMD .CC .CFLAGS .INPUT -o .OUTPUT .LINK
+} end;
+
+# optimized build
+recipe release { 
+    CC = gcc
+    INPUT = src/*.c
+    OUTPUT = fch8
+    LINK = -lraylib 
+    CFLAGS = -O2 -Wall -Wextra
+
+    CMD .CC .CFLAGS .INPUT -o .OUTPUT .LINK
+} end;
+
+# cleans all objects files from src 
+recipe clean {
+    OBJFILES = src/*.o
+
+    CMD rm -f .OBJFILES
+} end;

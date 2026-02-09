@@ -1,4 +1,4 @@
-v1.1:
-- fixes
-- `size_t` indexing
-- more instructions (20/32)
+v1.3 (or so):
+- switched to [MAD build system](https://github.com/Freemorger/mad) 
+(read README.md)    
+- small code cleanse (cleaned unused vars in `vm.c`, resolved UB in `main.c`)
